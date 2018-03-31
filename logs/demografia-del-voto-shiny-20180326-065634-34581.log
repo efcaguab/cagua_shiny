@@ -1,0 +1,18 @@
+Warning message:
+In file.symlink(from, to) :
+  cannot symlink '/usr/lib/R/library/base' to '/srv/shiny-server/demografia-del-voto/packrat/lib-R/base', reason 'File exists'
+
+Listening on http://127.0.0.1:34581
+
+Attaching package: ‘dplyr’
+
+The following objects are masked from ‘package:stats’:
+
+    filter, lag
+
+The following objects are masked from ‘package:base’:
+
+    intersect, setdiff, setequal, union
+
+
+Execution halted
