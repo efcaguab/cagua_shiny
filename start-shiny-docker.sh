@@ -15,5 +15,7 @@ docker exec -it shiny Rscript -e "install.packages('packrat')"
 
 # demografia del voto app
 docker exec -it shiny sudo chown -R shiny:shiny /srv/shiny-server/demografia-del-voto
-docker exec -it shiny Rscript -e "packrat::restore('/srv/shiny-server/demografia-del-voto')"
-docker exec -it shiny make -C /srv/shiny-server/demografia-del-voto
+docker exec -it -w /srv/shiny-server/demografia-del-voto shiny Rscript -e "packrat::restore()"
+docker exec -it -w /srv/shiny-server/demografia-del-voto shiny Rscript -e "packrat::on()"
+# docker exec -it shiny Rscript -e "setwd('/srv/shiny-server/demografia-del-voto'); packrat::on()"
+# docker exec -it shiny make -C /srv/shiny-server/demografia-del-voto
